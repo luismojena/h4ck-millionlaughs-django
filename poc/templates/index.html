@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Billion Laughs Attack</title>
+</head>
+<body>
+<form enctype="multipart/www-form-data" method="POST" action="/index/">
+{{ csrf_token }}
+<input type="file" name="xml_file"/>
+<input type="submit" value="Eviar Fichero"/>
+</form>
+</body>
+</html>
