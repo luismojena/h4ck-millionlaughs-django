@@ -31,5 +31,8 @@ ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
 
+# expose the port
+EXPOSE 8000
 
-# lanzar el gunicorn
+# lanzar el gunicorn, por el momento un manage.py
+CMD ["gunicorn", "h4ck_billinlaughs_django.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
