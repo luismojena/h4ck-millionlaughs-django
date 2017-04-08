@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from poc import views
 urlpatterns = [
+    url(r'^showcontent/', views.showcontent, name='showcontent'),
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
 ]
